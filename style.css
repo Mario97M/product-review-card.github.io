@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@200;300;400;500;700&display=swap");
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --darker-cyan: #1a4032;
+}
+
+body {
+  background-color: var(--cream);
+}
+
+.card {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img img {
+  width: 19.6em;
+  height: 29em;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.right-side {
+  background: white;
+  width: 19.6em;
+  height: 29em;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.inner-box {
+  position: relative;
+  margin: 0 2em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 5px;
+  font-size: 13px;
+}
+
+.title {
+  font-family: "Fraunces", serif;
+}
+
+.body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-grayish-blue);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.pricing {
+  display: flex;
+  margin: 1.6em 0;
+}
+
+.main-price {
+  font-family: "Fraunces", serif;
+  color: var(--dark-cyan);
+  font-size: 35px;
+  margin-right: 35px;
+}
+
+.discounted {
+  font-family: "Montserrat", sans-serif;
+  margin: auto 0;
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.btn {
+  background-color: var(--dark-cyan);
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  height: 3.7em;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--darker-cyan);
+}
+
+.btn span {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin: 0 8px;
+}
+
+.img-cart {
+  position: relative;
+  top: 2.5px;
+}
+
+@media all and (max-width: 710px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 24em;
+  }
+
+  .img img {
+    width: 100%;
+    height: 18em;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .right-side {
+    height: 26em;
+    width: auto;
+    border-radius: 0 0 12px 12px;
+    margin-top: -4px;
+  }
+}
